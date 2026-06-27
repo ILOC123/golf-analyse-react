@@ -1,0 +1,272 @@
+/* ── Setup-Formular ─────────────────────────────── */
+.setup {
+  padding: 16px;
+}
+.setupGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* ── Fortschrittsbalken ─────────────────────────── */
+.progressWrap {
+  padding: 8px 12px 4px;
+}
+.progMeta {
+  font-size: 10px;
+  color: var(--grey);
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+.progBg {
+  height: 4px;
+  background: var(--dark3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progFill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+/* ── Sticky Header ──────────────────────────────── */
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--dark);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ── Loch-Navigation ────────────────────────────── */
+.holeNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+}
+.holeInfo {
+  text-align: center;
+}
+.holeNumBig {
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.holeParInfo {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey-l);
+}
+.hnb {
+  background: var(--dark3);
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: var(--r-sm);
+  padding: 8px 18px;
+  color: var(--white);
+  font-size: 22px;
+  cursor: pointer;
+  min-height: var(--touch);
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font);
+}
+.hnb:disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+.hnb:active {
+  background: var(--dark4);
+}
+
+/* ── Zusammenfassungs-Streifen ──────────────────── */
+.summaryStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 12px 7px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+.sumLeft {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+.sumTotal {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.sumDiff {
+  font-size: 12px;
+  font-weight: 700;
+}
+.sumRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+.sumNetto {
+  font-size: 11px;
+  color: var(--grey);
+}
+.sumPts {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--grey);
+}
+
+/* ── Spielvorgabe-Info ──────────────────────────── */
+.hcpInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px 2px;
+}
+.extraBadge {
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--gold-bg);
+  color: var(--gold);
+  border-radius: 20px;
+  padding: 2px 9px;
+}
+
+/* ── Eingabe-Karte ──────────────────────────────── */
+.entryCard {
+  background: var(--dark2);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--r);
+  margin: 0 12px 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.entryRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.entryRow:last-child {
+  margin-bottom: 0;
+}
+.entryLabel {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ── Score-Widget ───────────────────────────────── */
+.scw {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark3);
+  border-radius: var(--r-sm);
+  border: 2px solid rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+}
+.scbtn {
+  width: 44px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  color: var(--grey-l);
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font);
+}
+.scbtn:active {
+  background: rgba(0, 0, 0, 0.08);
+}
+.scVal {
+  font-size: 32px;
+  min-width: 44px;
+  text-align: center;
+  color: var(--white);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Score-Farben */
+.eagle  { color: #D4A800; }
+.birdie { color: var(--green); }
+.bogey  { color: var(--orange); }
+.doppel { color: var(--red); }
+.triple { color: #8E44AD; }
+
+/* ── Toggle-Pill ────────────────────────────────── */
+.togglePill {
+  display: flex;
+  gap: 6px;
+}
+.topt {
+  flex: 1;
+  padding: 8px 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  background: var(--dark3);
+  font-family: var(--font);
+  color: var(--grey);
+  white-space: nowrap;
+}
+.topt:active {
+  background: var(--dark4);
+}
+.toptOn {
+  background: var(--gold);
+  color: #FFF;
+  border-color: var(--gold);
+}
+
+/* ── Live-Scorecard ─────────────────────────────── */
+.liveOvr {
+  padding: 0 12px 8px;
+}
+.liveOvrInner {
+  background: var(--dark2);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--r);
+  padding: 8px;
+}
+.liveSectionLabel {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--grey);
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.liveTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.liveTable td {
+  padding: 3px 1px;
+}
+.liveActiveHole {
+  background: var(--gold-bg);
+  border-radius: 3px;
+}
+.liveSumCell {
+  padding: 3px 4px !important;
+  font-weight: 700;
+  background: var(--dark3);
+  text-align: right;
+  border-radius: 3px;
+}

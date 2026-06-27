@@ -7,10 +7,10 @@ import Kurse from './views/Kurse'
 import { useGolfData } from './hooks/useGolfData'
 import './styles/global.css'
 
-function renderView(tab, data) {
+function renderView(tab, data, setTab) {
   switch (tab) {
     case 'stats':   return <Statistiken data={data} />
-    case 'round':   return <Runde data={data} />
+    case 'round':   return <Runde data={data} onRoundSaved={() => setTab('history')} />
     case 'history': return <Verlauf data={data} />
     case 'courses': return <Kurse data={data} />
     default:        return <Statistiken data={data} />
@@ -41,7 +41,7 @@ export default function App() {
       </header>
 
       <main style={{ flex: 1, overflowY: 'auto' }}>
-        {renderView(activeTab, data)}
+        {renderView(activeTab, data, setActiveTab)}
       </main>
 
       <NavBar activeTab={activeTab} onTabChange={setActiveTab} />
