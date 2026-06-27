@@ -1,0 +1,412 @@
+{
+  "rounds": [],
+  "courses": {
+    "c_davos": {
+      "id": "c_davos",
+      "name": "Golf Club Davos",
+      "holes": [
+        {
+          "par": 4,
+          "si": 3
+        },
+        {
+          "par": 3,
+          "si": 17
+        },
+        {
+          "par": 5,
+          "si": 13
+        },
+        {
+          "par": 3,
+          "si": 9
+        },
+        {
+          "par": 4,
+          "si": 5
+        },
+        {
+          "par": 5,
+          "si": 15
+        },
+        {
+          "par": 3,
+          "si": 11
+        },
+        {
+          "par": 4,
+          "si": 1
+        },
+        {
+          "par": 3,
+          "si": 7
+        },
+        {
+          "par": 4,
+          "si": 2
+        },
+        {
+          "par": 4,
+          "si": 12
+        },
+        {
+          "par": 4,
+          "si": 10
+        },
+        {
+          "par": 4,
+          "si": 4
+        },
+        {
+          "par": 3,
+          "si": 18
+        },
+        {
+          "par": 4,
+          "si": 14
+        },
+        {
+          "par": 4,
+          "si": 8
+        },
+        {
+          "par": 3,
+          "si": 16
+        },
+        {
+          "par": 4,
+          "si": 6
+        }
+      ],
+      "tees": [
+        {
+          "name": "Gelb",
+          "cr": 68.6,
+          "sr": 129
+        },
+        {
+          "name": "Blau",
+          "cr": 65.4,
+          "sr": 122
+        },
+        {
+          "name": "Rot",
+          "cr": 69.5,
+          "sr": 130
+        }
+      ]
+    },
+    "c_klosters": {
+      "id": "c_klosters",
+      "name": "Golf Club Klosters",
+      "holes": [
+        {
+          "par": 3,
+          "si": 17
+        },
+        {
+          "par": 4,
+          "si": 3
+        },
+        {
+          "par": 3,
+          "si": 11
+        },
+        {
+          "par": 3,
+          "si": 13
+        },
+        {
+          "par": 3,
+          "si": 5
+        },
+        {
+          "par": 5,
+          "si": 1
+        },
+        {
+          "par": 3,
+          "si": 15
+        },
+        {
+          "par": 4,
+          "si": 9
+        },
+        {
+          "par": 3,
+          "si": 7
+        },
+        {
+          "par": 3,
+          "si": 18
+        },
+        {
+          "par": 4,
+          "si": 4
+        },
+        {
+          "par": 3,
+          "si": 12
+        },
+        {
+          "par": 3,
+          "si": 14
+        },
+        {
+          "par": 3,
+          "si": 6
+        },
+        {
+          "par": 5,
+          "si": 2
+        },
+        {
+          "par": 3,
+          "si": 16
+        },
+        {
+          "par": 4,
+          "si": 10
+        },
+        {
+          "par": 3,
+          "si": 8
+        }
+      ],
+      "tees": [
+        {
+          "name": "Herren Normal",
+          "cr": 59,
+          "sr": 102
+        },
+        {
+          "name": "Herren Champ",
+          "cr": 60,
+          "sr": 107
+        }
+      ]
+    },
+    "c_alvaneu": {
+      "id": "c_alvaneu",
+      "name": "Golf Club Alvaneu Bad",
+      "holes": [
+        {
+          "par": 4,
+          "si": 11
+        },
+        {
+          "par": 4,
+          "si": 7
+        },
+        {
+          "par": 5,
+          "si": 13
+        },
+        {
+          "par": 4,
+          "si": 1
+        },
+        {
+          "par": 4,
+          "si": 5
+        },
+        {
+          "par": 4,
+          "si": 3
+        },
+        {
+          "par": 3,
+          "si": 15
+        },
+        {
+          "par": 5,
+          "si": 9
+        },
+        {
+          "par": 3,
+          "si": 17
+        },
+        {
+          "par": 4,
+          "si": 10
+        },
+        {
+          "par": 5,
+          "si": 4
+        },
+        {
+          "par": 4,
+          "si": 2
+        },
+        {
+          "par": 3,
+          "si": 18
+        },
+        {
+          "par": 4,
+          "si": 14
+        },
+        {
+          "par": 4,
+          "si": 6
+        },
+        {
+          "par": 5,
+          "si": 12
+        },
+        {
+          "par": 3,
+          "si": 8
+        },
+        {
+          "par": 4,
+          "si": 16
+        }
+      ],
+      "tees": [
+        {
+          "name": "Weiss",
+          "cr": 71.4,
+          "sr": 137
+        },
+        {
+          "name": "Gelb",
+          "cr": 70.4,
+          "sr": 130
+        },
+        {
+          "name": "Blau (Damen)",
+          "cr": 72.6,
+          "sr": 137
+        },
+        {
+          "name": "Rot (Damen)",
+          "cr": 71.3,
+          "sr": 132
+        }
+      ]
+    }
+  },
+  "hcpLog": [
+    {
+      "date": "2024-07-14",
+      "hcp": 22.1,
+      "note": "Clubmeisterschaften 2024, 2. Rd",
+      "asd": 31.9
+    },
+    {
+      "date": "2024-08-03",
+      "hcp": 22.1,
+      "note": "Davos Masters",
+      "asd": 28.4
+    },
+    {
+      "date": "2024-08-11",
+      "hcp": 21.7,
+      "note": "General Play",
+      "asd": 22.2
+    },
+    {
+      "date": "2024-08-25",
+      "hcp": 21.1,
+      "note": "General Play",
+      "asd": 19.6
+    },
+    {
+      "date": "2024-08-31",
+      "hcp": 20.9,
+      "note": "General Play (Appenzell)",
+      "asd": 22.5
+    },
+    {
+      "date": "2024-09-29",
+      "hcp": 19.9,
+      "note": "EDS: Bauriedl, Fritz",
+      "asd": 15.2
+    },
+    {
+      "date": "2024-10-06",
+      "hcp": 19.4,
+      "note": "General Play",
+      "asd": 18.7
+    },
+    {
+      "date": "2024-10-12",
+      "hcp": 18.9,
+      "note": "Abgolfen",
+      "asd": 18.7
+    },
+    {
+      "date": "2024-10-20",
+      "hcp": 18.6,
+      "note": "General Play",
+      "asd": 20.1
+    },
+    {
+      "date": "2024-10-26",
+      "hcp": 18.6,
+      "note": "Club Turnier ADANK",
+      "asd": 28
+    },
+    {
+      "date": "2025-06-21",
+      "hcp": 17.9,
+      "note": "EDS: Langner, Joachim",
+      "asd": 15.2
+    },
+    {
+      "date": "2025-06-22",
+      "hcp": 15.6,
+      "note": "EDS: Ryf, Fabian",
+      "asd": 10
+    },
+    {
+      "date": "2025-06-25",
+      "hcp": 14.9,
+      "note": "General Play",
+      "asd": 12.6
+    },
+    {
+      "date": "2025-06-26",
+      "hcp": 14.9,
+      "note": "General Play",
+      "asd": null
+    },
+    {
+      "date": "2025-07-12",
+      "hcp": 14.9,
+      "note": "Clubmeisterschaften 2025, 1. Rd",
+      "asd": 19.6
+    },
+    {
+      "date": "2025-07-13",
+      "hcp": 14.9,
+      "note": "Clubmeisterschaften 2025, 2. Rd",
+      "asd": 24
+    },
+    {
+      "date": "2025-07-19",
+      "hcp": 14,
+      "note": "Best of the Alps Golf Cup",
+      "asd": 11.7
+    },
+    {
+      "date": "2025-08-23",
+      "hcp": 14,
+      "note": "Davos Masters",
+      "asd": 21.4
+    },
+    {
+      "date": "2025-10-11",
+      "hcp": 14,
+      "note": "Abgolfen",
+      "asd": 18.7
+    },
+    {
+      "date": "2026-06-14",
+      "hcp": 14.3,
+      "note": "General Play",
+      "asd": 17
+    }
+  ]
+}

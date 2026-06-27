@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useLocalStorage } from './useLocalStorage'
 import { calcEstWhs } from '../utils/golf'
 
@@ -5,6 +6,18 @@ export function useGolfData() {
   const [rounds, setRounds] = useLocalStorage('ga_rounds', [])
   const [courses, setCourses] = useLocalStorage('ga_courses', {})
   const [hcpLog, setHcpLog] = useLocalStorage('ga_hcp_log', [])
+
+  useEffect(() => {
+    if (Object.keys(courses).length > 0) return
+    fetch('/golf-analyse-react/golf-daten.json')
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.courses && Object.keys(data.courses).length > 0) setCourses(data.courses)
+        if (Array.isArray(data.hcpLog) && data.hcpLog.length > 0 && hcpLog.length === 0) setHcpLog(data.hcpLog)
+        if (Array.isArray(data.rounds) && data.rounds.length > 0 && rounds.length === 0) setRounds(data.rounds)
+      })
+      .catch(() => {})
+  }, [])
 
   // --- Runden ---
 
