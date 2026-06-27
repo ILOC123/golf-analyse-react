@@ -1,5 +1,4 @@
 import { test } from '@playwright/test'
-import path from 'path'
 
 const OUT = 'tests/screenshots'
 
@@ -22,14 +21,30 @@ test('Runde – Setup', async ({ page }) => {
   await page.screenshot({ path: `${OUT}/2-runde-setup.png` })
 })
 
+test('Runde – Loch 1 (Eingabe)', async ({ page }) => {
+  await page.goto('/')
+  await goToTab(page, 'Runde')
+  await page.getByRole('button', { name: /Runde starten/i }).click()
+  await page.waitForTimeout(400)
+  await page.screenshot({ path: `${OUT}/3-runde-loch1.png`, fullPage: true })
+})
+
+test('Runde – Loch 1 (Scorecard unten)', async ({ page }) => {
+  await page.goto('/')
+  await goToTab(page, 'Runde')
+  await page.getByRole('button', { name: /Runde starten/i }).click()
+  await page.waitForTimeout(400)
+  await page.screenshot({ path: `${OUT}/4-runde-loch1-scroll.png`, fullPage: true })
+})
+
 test('Verlauf', async ({ page }) => {
   await page.goto('/')
   await goToTab(page, 'Verlauf')
-  await page.screenshot({ path: `${OUT}/3-verlauf.png` })
+  await page.screenshot({ path: `${OUT}/5-verlauf.png` })
 })
 
 test('Kurse', async ({ page }) => {
   await page.goto('/')
   await goToTab(page, 'Kurse')
-  await page.screenshot({ path: `${OUT}/4-kurse.png` })
+  await page.screenshot({ path: `${OUT}/6-kurse.png` })
 })

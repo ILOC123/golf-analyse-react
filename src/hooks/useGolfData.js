@@ -21,10 +21,6 @@ export function useGolfData() {
 
   // --- Runden ---
 
-  function saveRound(round) {
-    setRounds((prev) => [...prev, round])
-  }
-
   function saveRoundComplete(round) {
     setRounds((prev) => [...prev, round])
 
@@ -125,7 +121,6 @@ export function useGolfData() {
     hcpLog,
 
     // Runden
-    saveRound,
     saveRoundComplete,
     deleteRound,
     roundsSorted,
