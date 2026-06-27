@@ -193,29 +193,27 @@ export default function Runde({ data, onRoundSaved }) {
                 </select>
               </div>
             </div>
-            <div className={styles.setupGrid}>
-              <div>
-                <label className="form-label" style={{ fontSize: 9 }}>DATUM</label>
-                <input
-                  type="date"
-                  className="form-input"
-                  style={{ fontFamily: 'monospace', fontSize: 14, fontWeight: 700, textAlign: 'center', padding: '7px 6px', height: 36 }}
-                  value={form.date}
-                  onChange={(e) => setForm((f) => ({ ...f, date: e.target.value }))}
-                />
-              </div>
-              <div>
-                <label className="form-label" style={{ fontSize: 9 }}>HANDICAP</label>
-                <input
-                  type="number"
-                  className="form-input"
-                  min="0" max="54" step="0.1"
-                  inputMode="decimal"
-                  style={{ fontFamily: 'monospace', textAlign: 'center', fontSize: 14, fontWeight: 700, padding: '7px 6px', height: 36 }}
-                  value={hcp}
-                  onChange={(e) => setForm((f) => ({ ...f, hcp: e.target.value }))}
-                />
-              </div>
+            <div style={{ marginBottom: 10 }}>
+              <label className="form-label" style={{ fontSize: 9 }}>DATUM</label>
+              <input
+                type="date"
+                className="form-input"
+                style={{ fontFamily: 'monospace', fontSize: 14, fontWeight: 700, textAlign: 'center', padding: '7px 6px', height: 36 }}
+                value={form.date}
+                onChange={(e) => setForm((f) => ({ ...f, date: e.target.value }))}
+              />
+            </div>
+            <div style={{ marginBottom: 10 }}>
+              <label className="form-label" style={{ fontSize: 9 }}>HANDICAP</label>
+              <input
+                type="number"
+                className="form-input"
+                min="0" max="54" step="0.1"
+                inputMode="decimal"
+                style={{ fontFamily: 'monospace', textAlign: 'center', fontSize: 14, fontWeight: 700, padding: '7px 6px', height: 36 }}
+                value={hcp}
+                onChange={(e) => setForm((f) => ({ ...f, hcp: e.target.value }))}
+              />
             </div>
             <button className="btn-primary" onClick={startRound}>
               Runde starten
