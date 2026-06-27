@@ -94,6 +94,12 @@ export function useGolfData() {
     return hcpLog.slice().sort((a, b) => a.date.localeCompare(b.date))
   }
 
+  function importAll({ rounds: r, courses: c, hcpLog: h }) {
+    if (Array.isArray(r)) setRounds(r)
+    if (c && typeof c === 'object' && !Array.isArray(c)) setCourses(c)
+    if (Array.isArray(h)) setHcpLog(h)
+  }
+
   function latestHcp() {
     if (!hcpLog.length) return null
     return hcpLog.slice().sort((a, b) => b.date.localeCompare(a.date))[0].hcp
@@ -121,5 +127,8 @@ export function useGolfData() {
     deleteHcpEntry,
     hcpLogSorted,
     latestHcp,
+
+    // Migration
+    importAll,
   }
 }

@@ -22,10 +22,28 @@ function filteredRounds(rounds, filter) {
 }
 
 export default function Statistiken({ data }) {
-  const { rounds, courses, hcpLog, saveHcpEntry, deleteHcpEntry, hcpLogSorted } = data
+  const { rounds, courses, hcpLog, saveHcpEntry, deleteHcpEntry, hcpLogSorted, importAll } = data
   const [filter, setFilter]         = useState('all')
   const [showHcp, setShowHcp]       = useState(false)
   const [hcpForm, setHcpForm]       = useState({ date: new Date().toISOString().slice(0, 10), hcp: '', note: '' })
+  const [importMsg, setImportMsg]   = useState(null)
+
+  function handleImport(e) {
+    const file = e.target.files[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = (ev) => {
+      try {
+        const json = JSON.parse(ev.target.result)
+        importAll(json)
+        setImportMsg(`Importiert: ${(json.rounds||[]).length} Runden, ${Object.keys(json.courses||{}).length} Kurse`)
+      } catch {
+        setImportMsg('Fehler: Ungültige Datei')
+      }
+    }
+    reader.readAsText(file)
+    e.target.value = ''
+  }
 
   const subset = filteredRounds(rounds, filter)
   const s      = calcStats(subset, courses)
@@ -160,6 +178,27 @@ export default function Statistiken({ data }) {
           <HcpKurve hcpSorted={hcpSorted} best8={best8} estWhs={estWhs} onAdd={() => setShowHcp(true)} />
         </>
       )}
+
+      {/* Daten importieren */}
+      <div className="card" style={{ marginBottom: 24 }}>
+        <div className="card-hdr"><div className="card-title">Daten importieren</div></div>
+        <div className="card-body">
+          <p style={{ fontSize: 12, color: 'var(--grey)', marginBottom: 10 }}>
+            Exportiere zuerst die Daten aus der alten Golf-Analyse App (Button unten rechts), dann hier die Datei auswählen.
+          </p>
+          <label style={{ display: 'block' }}>
+            <input type="file" accept=".json" style={{ display: 'none' }} onChange={handleImport} />
+            <span className="btn-secondary" style={{ display: 'flex', cursor: 'pointer' }}>
+              golf-daten.json auswählen
+            </span>
+          </label>
+          {importMsg && (
+            <div style={{ marginTop: 8, fontSize: 13, color: importMsg.startsWith('Fehler') ? 'var(--red)' : 'var(--green)', fontWeight: 600 }}>
+              {importMsg}
+            </div>
+          )}
+        </div>
+      </div>
 
       {/* HCP Sheet */}
       <BottomSheet isOpen={showHcp} onClose={() => setShowHcp(false)} title="HCP-Verlauf">
