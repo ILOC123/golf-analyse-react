@@ -196,7 +196,7 @@ export default function Runde({ data, onRoundSaved }) {
               <input
                 type="date"
                 className="form-input"
-                style={{ fontFamily: 'monospace', fontSize: 14, fontWeight: 700, textAlign: 'center', padding: '7px 6px', height: 36 }}
+                style={{ fontSize: 14, fontWeight: 600, height: 44, padding: '7px 14px' }}
                 value={form.date}
                 onChange={(e) => setForm((f) => ({ ...f, date: e.target.value }))}
               />
@@ -204,13 +204,13 @@ export default function Runde({ data, onRoundSaved }) {
             <div style={{ marginBottom: 10 }}>
               <label className="form-label" style={{ fontSize: 9 }}>HANDICAP</label>
               <input
-                type="number"
+                type="text"
                 className="form-input"
-                min="0" max="54" step="0.1"
                 inputMode="decimal"
-                style={{ fontFamily: 'monospace', textAlign: 'center', fontSize: 14, fontWeight: 700, padding: '7px 6px', height: 36 }}
+                placeholder="z.B. 14.3"
+                style={{ textAlign: 'center', fontSize: 16, fontWeight: 700, height: 44, padding: '7px 14px' }}
                 value={hcp}
-                onChange={(e) => setForm((f) => ({ ...f, hcp: e.target.value }))}
+                onChange={(e) => setForm((f) => ({ ...f, hcp: e.target.value.replace(',', '.') }))}
               />
             </div>
             <button className="btn-primary" onClick={startRound}>
