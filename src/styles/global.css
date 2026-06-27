@@ -112,3 +112,30 @@ html, body, #root {
 .empty-icon { font-size: 48px; margin-bottom: 12px; }
 .empty-text { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
 .empty-sub { font-size: 13px; color: var(--grey); }
+
+/* ── Shared: Score-Farben ───────────────────────── */
+.clr-pos { color: var(--red); }
+.clr-neg { color: var(--green); }
+.clr-neu { color: var(--grey); }
+
+/* ── Shared: Score-Badge ────────────────────────── */
+.sc-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 700; line-height: 1;
+}
+.sc-badge.eagle  { border: 1.5px solid #D4A800; border-radius: 50%; outline: 1.5px solid #D4A800; outline-offset: 2px; color: #D4A800; }
+.sc-badge.birdie { border: 1.5px solid var(--green); border-radius: 50%; color: var(--green); }
+.sc-badge.bogey  { border: 1.5px solid var(--orange); border-radius: 3px; color: var(--orange); }
+.sc-badge.doppel { border: 1.5px solid var(--red); border-radius: 3px; outline: 1.5px solid var(--red); outline-offset: 2px; color: var(--red); }
+
+/* ── Shared: Stat-Chips ─────────────────────────── */
+.stat-chips {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 6px; padding: 10px 12px 4px;
+}
+.stat-chip {
+  background: var(--dark2); border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--r); padding: 10px 6px; text-align: center;
+}
+.sc-val { font-size: 20px; letter-spacing: 1px; color: var(--gold); font-weight: 700; }
+.sc-lbl { font-size: 9px; color: var(--grey); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }

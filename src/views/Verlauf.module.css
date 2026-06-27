@@ -1,0 +1,25 @@
+.note {
+  font-size: 11px;
+  color: var(--grey);
+  margin-top: 2px;
+  font-style: italic;
+}
+
+.listScore {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.listPts {
+  font-size: 10px;
+  color: var(--gold);
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.detailMeta {
+  font-size: 12px;
+  color: var(--grey);
+  margin-bottom: 10px;
+}
