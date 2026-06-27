@@ -1,0 +1,116 @@
+.parBadge {
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--gold-bg);
+  color: var(--gold);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+.sectionLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--grey-l);
+  margin-bottom: 8px;
+}
+
+.holeGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.holeCell {
+  background: var(--dark3);
+  border-radius: 6px;
+  padding: 6px 4px;
+  text-align: center;
+}
+
+.holeCellNum {
+  color: var(--grey);
+  font-size: 9px;
+}
+
+.holeCellPar {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ── Add Wizard ── */
+.holeCfgRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.holeCfgRow:last-of-type { border-bottom: none; }
+
+.holeCfgNum {
+  font-size: 11px;
+  color: var(--grey);
+  width: 28px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.holeCfgPar { flex: 1; }
+
+.parBtnGroup {
+  display: flex;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+}
+
+.parBtn {
+  flex: 1;
+  padding: 7px 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background: var(--dark3);
+  font-family: var(--font);
+  color: var(--grey);
+}
+
+.parBtnOn {
+  background: var(--gold);
+  color: #FFF;
+}
+
+.siInput {
+  width: 56px;
+  background: var(--dark3);
+  border: 1.5px solid rgba(0, 0, 0, 0.10);
+  border-radius: var(--r-sm);
+  padding: 7px 6px;
+  color: var(--white);
+  font-size: 13px;
+  text-align: center;
+  font-family: var(--font);
+}
+
+.teeRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.teeDel {
+  background: none;
+  border: none;
+  color: var(--red);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  min-width: 28px;
+  flex-shrink: 0;
+}
