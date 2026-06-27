@@ -97,6 +97,8 @@ html, body, #root {
   border-radius: var(--r-sm); padding: 12px 14px;
   color: var(--white); font-size: 15px; font-family: var(--font);
   min-height: var(--touch);
+  -webkit-appearance: none;
+  appearance: none;
 }
 .form-input:focus { outline: none; border-color: var(--gold); }
 
