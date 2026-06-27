@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import BottomSheet from '../components/BottomSheet'
 import { calcStats, calcEstWhs, getBest8Dates, formatDate, diffClass } from '../utils/golf'
 import styles from './Statistiken.module.css'
@@ -27,6 +27,7 @@ export default function Statistiken({ data }) {
   const [showHcp, setShowHcp]       = useState(false)
   const [hcpForm, setHcpForm]       = useState({ date: new Date().toISOString().slice(0, 10), hcp: '', note: '' })
   const [importMsg, setImportMsg]   = useState(null)
+  const fileInputRef                = useRef(null)
 
   function handleImport(e) {
     const file = e.target.files[0]
@@ -186,12 +187,10 @@ export default function Statistiken({ data }) {
           <p style={{ fontSize: 12, color: 'var(--grey)', marginBottom: 10 }}>
             Exportiere zuerst die Daten aus der alten Golf-Analyse App (Button unten rechts), dann hier die Datei auswählen.
           </p>
-          <label style={{ display: 'block' }}>
-            <input type="file" accept=".json" style={{ display: 'none' }} onChange={handleImport} />
-            <span className="btn-secondary" style={{ display: 'flex', cursor: 'pointer' }}>
-              golf-daten.json auswählen
-            </span>
-          </label>
+          <input ref={fileInputRef} type="file" accept=".json" style={{ display: 'none' }} onChange={handleImport} />
+          <button className="btn-secondary" onClick={() => fileInputRef.current?.click()}>
+            golf-daten.json auswählen
+          </button>
           {importMsg && (
             <div style={{ marginTop: 8, fontSize: 13, color: importMsg.startsWith('Fehler') ? 'var(--red)' : 'var(--green)', fontWeight: 600 }}>
               {importMsg}
