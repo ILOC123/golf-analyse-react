@@ -7,7 +7,7 @@ const FILTERS = [
   { val: 'all', label: 'Alle' },
   { val: 5,     label: '5 Runden' },
   { val: 10,    label: '10 Runden' },
-  { val: 'year', label: 'Aktuelles Jahr' },
+  { val: 'year', label: 'Dies. Jahr' },
 ]
 
 const DIST_ORDER = ['eagle', 'birdie', 'par', 'bogey', 'doppel', 'triple']

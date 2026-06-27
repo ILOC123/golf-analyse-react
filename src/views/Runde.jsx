@@ -160,38 +160,36 @@ export default function Runde({ data, onRoundSaved }) {
           </div>
         ) : (
           <>
-            <div className={styles.setupGrid}>
-              <div>
-                <label className="form-label" style={{ fontSize: 9 }}>GOLFPLATZ</label>
-                <select
-                  className="form-input"
-                  style={{ padding: '7px 6px', fontSize: 14, height: 36, textAlign: 'center' }}
-                  value={courseId}
-                  onChange={(e) => handleCourseChange(e.target.value)}
-                >
-                  {courseIds.map((id) => (
-                    <option key={id} value={id}>{courses[id].name}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="form-label" style={{ fontSize: 9 }}>ABSCHLAG</label>
-                <select
-                  className="form-input"
-                  style={{ padding: '7px 6px', fontSize: 14, height: 36, textAlign: 'center' }}
-                  value={tee}
-                  onChange={(e) => setForm((f) => ({ ...f, tee: e.target.value }))}
-                >
-                  {tees.length === 0
-                    ? <option value="">Kein Abschlag</option>
-                    : tees.map((t) => (
-                      <option key={t.name} value={t.name}>
-                        {t.name} (CR {t.cr} / SR {t.sr})
-                      </option>
-                    ))
-                  }
-                </select>
-              </div>
+            <div style={{ marginBottom: 10 }}>
+              <label className="form-label" style={{ fontSize: 9 }}>GOLFPLATZ</label>
+              <select
+                className="form-input"
+                style={{ padding: '7px 14px', fontSize: 14, height: 44 }}
+                value={courseId}
+                onChange={(e) => handleCourseChange(e.target.value)}
+              >
+                {courseIds.map((id) => (
+                  <option key={id} value={id}>{courses[id].name}</option>
+                ))}
+              </select>
+            </div>
+            <div style={{ marginBottom: 10 }}>
+              <label className="form-label" style={{ fontSize: 9 }}>ABSCHLAG</label>
+              <select
+                className="form-input"
+                style={{ padding: '7px 14px', fontSize: 14, height: 44 }}
+                value={tee}
+                onChange={(e) => setForm((f) => ({ ...f, tee: e.target.value }))}
+              >
+                {tees.length === 0
+                  ? <option value="">Kein Abschlag</option>
+                  : tees.map((t) => (
+                    <option key={t.name} value={t.name}>
+                      {t.name} (CR {t.cr} / SR {t.sr})
+                    </option>
+                  ))
+                }
+              </select>
             </div>
             <div style={{ marginBottom: 10 }}>
               <label className="form-label" style={{ fontSize: 9 }}>DATUM</label>
