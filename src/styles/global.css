@@ -34,6 +34,22 @@ html, body, #root {
 }
 
 /* ── Shared: Karten ─────────────────────────────── */
+.card-hdr {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--grey-l);
+}
+.card-body { padding: 14px; }
+
 .card {
   background: var(--dark2);
   border: 1px solid rgba(0, 0, 0, 0.08);

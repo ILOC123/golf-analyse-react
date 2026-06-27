@@ -1,0 +1,121 @@
+.filterRow {
+  display: flex;
+  gap: 8px;
+  padding: 0 12px 12px;
+  overflow-x: auto;
+}
+
+.fchip {
+  flex-shrink: 0;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--dark3);
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-family: var(--font);
+  color: var(--white);
+}
+.fchipOn {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #FFF;
+}
+
+.hero {
+  background: linear-gradient(135deg, rgba(0,107,84,0.12), rgba(0,107,84,0.04));
+  border: 1px solid rgba(0,107,84,0.2);
+  border-radius: var(--r);
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.heroLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.heroScore {
+  font-size: 52px;
+  letter-spacing: 2px;
+  color: var(--white);
+  line-height: 1;
+  font-weight: 800;
+}
+.heroSub {
+  font-size: 11px;
+  color: var(--grey);
+  margin-top: 4px;
+}
+
+/* Score-Verteilung */
+.distRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+}
+.distLbl {
+  font-size: 12px;
+  font-weight: 600;
+  width: 58px;
+  flex-shrink: 0;
+}
+.distBg {
+  flex: 1;
+  height: 8px;
+  background: var(--dark3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.distBar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s;
+}
+.dist_eagle  { background: #F1C40F; }
+.dist_birdie { background: var(--green); }
+.dist_par    { background: var(--gold); }
+.dist_bogey  { background: var(--orange); }
+.dist_doppel { background: var(--red); }
+.dist_triple { background: #8E44AD; }
+.distN {
+  font-size: 11px;
+  color: var(--grey-l);
+  width: 28px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Par-Grid */
+.parGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 0 12px 10px;
+}
+.parCard {
+  background: var(--dark2);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--r);
+  padding: 12px 8px;
+  text-align: center;
+}
+.parCardLbl {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 6px;
+}
+.parCardVal {
+  font-size: 26px;
+  letter-spacing: 1px;
+  color: var(--white);
+  font-weight: 700;
+}
